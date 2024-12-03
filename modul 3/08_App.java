@@ -50,7 +50,7 @@ class Gaji {
         //int totalGaji = this.gajiPokok + this.tunjangan;
         //int pajakRupiah = (int) ((this.pajak / 100) * totalGaji); // Menghitung pajak dalam rupiah dan dibulatkan ke int
         //return totalGaji - pajakRupiah;
-    }
+    //}
 
     // Method untuk mencetak Gaji Bersih
     public void cetakGajiBersih() {
