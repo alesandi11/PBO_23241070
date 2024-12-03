@@ -38,21 +38,22 @@ class Gaji {
 
     // Getter untuk Pajak (dalam persen)
     public double getPajak() {
-        return this.pajak;
+    return (gajiPokok + tunjangan) * (pajak / 100);
     }
 
     // Method untuk menghitung Gaji Bersih (menggunakan int)
-    public int hitungGajiBersih() {
-        int totalGaji = this.gajiPokok + this.tunjangan;
-        int pajakRupiah = (int) ((this.pajak / 100) * totalGaji); // Menghitung pajak dalam rupiah dan dibulatkan ke int
-        return totalGaji - pajakRupiah;
+    public double hitungGajiBersih() {
+    return (gajiPokok + tunjangan) - getPajak();
+
+    // Method untuk menghitung Gaji Bersih (menggunakan int)
+    //public int hitungGajiBersih() {
+        //int totalGaji = this.gajiPokok + this.tunjangan;
+        //int pajakRupiah = (int) ((this.pajak / 100) * totalGaji); // Menghitung pajak dalam rupiah dan dibulatkan ke int
+        //return totalGaji - pajakRupiah;
     }
 
     // Method untuk mencetak Gaji Bersih
     public void cetakGajiBersih() {
-        System.out.println("Gaji Pokok   : " + this.gajiPokok);
-        System.out.println("Tunjangan    : " + this.tunjangan);
-        System.out.println("Pajak        : " + this.pajak + "%");
         System.out.println("Gaji Bersih  : " + hitungGajiBersih());
     }
 }
